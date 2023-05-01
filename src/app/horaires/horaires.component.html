@@ -1,1 +1,55 @@
-<p>horaires works!</p>
+<ul>
+    <li *ngFor="let horaire of horaires">
+        <div>
+            <h3>semaine {{horaire.semaine}} {{horaire.annee}}</h3>
+            <table class="table table-striped">
+                <tr>
+                    <th>         </th>
+                    <th scope="col">Lundi</th>
+                    <th scope="col">Mardi</th>
+                    <th scope="col">Mercredi</th>
+                    <th scope="col">Jeudi</th>
+                    <th scope="col">Vendredi</th>
+                </tr>
+                <tr>
+                    <th scope="row">Arrivée Matin</th>
+                    <td>{{horaire.jour0.matina}}</td>
+                    <td>{{horaire.jour1.matina}}</td>
+                    <td>{{horaire.jour2.matina}}</td>
+                    <td>{{horaire.jour3.matina}}</td>
+                    <td>{{horaire.jour4.matina}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Départ Matin</th>
+                    <td>{{horaire.jour0.matind}}</td>
+                    <td>{{horaire.jour1.matind}}</td>
+                    <td>{{horaire.jour2.matind}}</td>
+                    <td>{{horaire.jour3.matind}}</td>
+                    <td>{{horaire.jour4.matind}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Arrivée Après-Midi</th>
+                    <td>{{horaire.jour0.aprema}}</td>
+                    <td>{{horaire.jour1.aprema}}</td>
+                    <td>{{horaire.jour2.aprema}}</td>
+                    <td>{{horaire.jour3.aprema}}</td>
+                    <td>{{horaire.jour4.aprema}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Départ Après-Midi</th>
+                    <td>{{horaire.jour0.apremd}}</td>
+                    <td>{{horaire.jour1.apremd}}</td>
+                    <td>{{horaire.jour2.apremd}}</td>
+                    <td>{{horaire.jour3.apremd}}</td>
+                    <td>{{horaire.jour4.apremd}}</td>
+                </tr>
+            </table>
+        </div>
+    </li>
+</ul>
+<span>{{horairesSemaine.annee}}</span>
+<br>
+<span>{{horairesSemaine.jour0.matina}}</span>
+<br>
+
+<button type="button" class="btn btn-primary" (click)="refresh()">Refresh</button>

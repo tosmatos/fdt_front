@@ -3,23 +3,30 @@ export interface Horaires {
     employe_id: number,
     annee: number,
     semaine: number,
-    jour0: JSON,
-    jour1: JSON,
-    jour2: JSON,
-    jour3: JSON,
-    jour4: JSON,
+    jour0: Jour,
+    jour1: Jour,
+    jour2: Jour,
+    jour3: Jour,
+    jour4: Jour,
+}
+
+export interface Jour {
+    matina: number,
+    matind: number,
+    aprema: number,
+    apremd: number
 }
 
 export function emptyHoraires(): Horaires {
     return {
         id: 0,
         employe_id: 0,
-        annee: 0,
+        annee: 2028,
         semaine: 0,
-        jour0: {} as JSON,
-        jour1: {} as JSON,
-        jour2: {} as JSON,
-        jour3: {} as JSON,
-        jour4: {} as JSON,
+        jour0: {} as Jour,
+        jour1: {} as Jour,
+        jour2: {} as Jour,
+        jour3: {} as Jour,
+        jour4: {} as Jour,
     }
 }
