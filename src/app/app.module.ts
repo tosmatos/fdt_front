@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HorairesComponent } from './horaires/horaires.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HorairesDetailComponent } from './horaires-detail/horaires-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HorairesComponent
+    HorairesComponent,
+    HorairesDetailComponent
   ],
   imports: [
     BrowserModule,
